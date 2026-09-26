@@ -1,0 +1,70 @@
+export default function PrivacyPage() {
+  return (
+    <main className="section">
+      <div className="container narrow">
+        <div className="section-label">PRIVACY</div>
+
+        <h1>Privacy Policy</h1>
+
+        <p>
+          MMV Microfinance & Lending respects the privacy of individuals whose
+          personal information it processes in connection with loan
+          applications and related services.
+        </p>
+
+        <h2>Information We May Process</h2>
+
+        <p>
+          Depending on the stage of the application, information may include
+          identification details, contact information, employment information,
+          loan information and documents required for verification.
+        </p>
+
+        <h2>Purpose of Processing</h2>
+
+        <p>
+          Personal information may be processed for identity verification,
+          eligibility evaluation, loan processing, documentation, account
+          administration, fraud prevention, compliance and other legitimate
+          purposes related to the lending relationship.
+        </p>
+
+        <h2>Data Protection</h2>
+
+        <p>
+          MMV Microfinance & Lending should apply appropriate organizational,
+          physical and technical measures to protect personal information
+          against unauthorized access, alteration, disclosure or destruction.
+        </p>
+
+        <h2>Data Subject Rights</h2>
+
+        <p>
+          Data subjects may have rights under applicable Philippine privacy
+          laws, including rights relating to access, correction, objection and
+          other applicable rights.
+        </p>
+
+        <h2>Contact</h2>
+
+        <p>
+          MMV Microfinance & Lending
+          <br />
+          B14 L57 PH1 East Bellevue
+          <br />
+          San Isidro, Rodriguez, Rizal 1860
+          <br />
+          Mobile: 0919 097 6018
+          <br />
+          Landline: (02) 8926 2147
+        </p>
+
+        <p className="small-note">
+          This page is a website template and should be reviewed and finalized
+          by MMV's privacy/compliance adviser before being used as the
+          company's official privacy notice.
+        </p>
+      </div>
+    </main>
+  );
+}
