@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -196,23 +195,18 @@ export default function HomePage() {
 
       <header className="site-header">
         <div className="container nav">
-          <Link href="/" className="brand" aria-label="MMV Microfinance & Lending home">
-            <Image
-              src="/mmv-logo.png"
-              alt="MMV MicroFinance & Lending"
-              width={568}
-              height={439}
-              className="brand-logo-image"
-              sizes="(max-width: 640px) 116px, 142px"
-              style={{ width: 74, height: "auto", display: "block" }}
-            />
-            <span className="brand-copy" aria-hidden="true">
+          <Link href="/" className="brand">
+            <div className="brand-symbol">
+              <span>M</span>
+            </div>
+
+            <div>
               <strong>MMV</strong>
               <small>MICROFINANCE & LENDING</small>
-            </span>
+            </div>
           </Link>
 
-          <nav aria-label="Primary navigation" className={`desktop-nav ${mobileMenu ? "mobile-open" : ""}`}>
+          <nav className={`desktop-nav ${mobileMenu ? "mobile-open" : ""}`}>
             <a href="#about" onClick={closeMobileMenu}>
               About
             </a>
@@ -263,7 +257,7 @@ export default function HomePage() {
           HERO
       ================================= */}
 
-      <section className="hero" aria-labelledby="hero-title">
+      <section className="hero">
         <div className="hero-orb orb-one" />
         <div className="hero-orb orb-two" />
 
@@ -279,7 +273,7 @@ export default function HomePage() {
               BUILT FOR BPO PROFESSIONALS
             </div>
 
-            <h1 id="hero-title">
+            <h1>
               When payday
               <br />
               isn't quite <em>enough.</em>
@@ -331,35 +325,6 @@ export default function HomePage() {
           >
             <div className="visual-glow" />
 
-            <div
-              className="hero-logo-card"
-              style={{
-                position: "relative",
-                zIndex: 2,
-                width: "min(100%, 460px)",
-                margin: "0 auto 18px",
-                padding: "22px 22px 18px",
-                borderRadius: 28,
-                background: "rgba(255, 255, 255, 0.94)",
-                boxShadow: "0 22px 55px rgba(7, 35, 21, 0.14)",
-                textAlign: "center",
-                backdropFilter: "blur(12px)",
-              }}
-            >
-
-              <Image
-                src="/mmv-logo.png"
-                alt="MMV MicroFinance & Lending logo"
-                width={568}
-                height={439}
-                className="hero-logo-image"
-                sizes="(max-width: 900px) 320px, 460px"
-                priority
-                style={{ width: "min(100%, 360px)", height: "auto", margin: "0 auto", display: "block" }}
-              />
-              
-            </div>
-
             <div className="hero-info-card">
               <div className="hero-info-icon">
                 <ShieldCheck size={20} />
@@ -372,7 +337,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="hero-main-card hero-main-card--stacked">
+            <div className="hero-main-card">
               <div className="hero-card-top">
                 <div className="hero-card-number">01</div>
 
@@ -464,13 +429,13 @@ export default function HomePage() {
           ABOUT
       ================================= */}
 
-      <section id="about" className="section about-section" aria-labelledby="about-title">
+      <section id="about" className="section about-section">
         <div className="container">
           <div className="section-intro">
             <div>
               <div className="eyebrow-dark">WHY MMV</div>
 
-              <h2 id="about-title">
+              <h2>
                 Financial help without
                 <span> unnecessary complexity.</span>
               </h2>
@@ -564,13 +529,13 @@ export default function HomePage() {
           LOAN OPTIONS
       ================================= */}
 
-      <section id="loans" className="loan-section" aria-labelledby="loans-title">
+      <section id="loans" className="loan-section">
         <div className="container">
           <div className="loan-heading">
             <div>
               <div className="eyebrow-light">LOAN OPTIONS</div>
 
-              <h2 id="loans-title">
+              <h2>
                 Know the numbers
                 <br />
                 <span>before you decide.</span>
@@ -643,13 +608,13 @@ export default function HomePage() {
           PROCESS
       ================================= */}
 
-      <section id="process" className="section process-section" aria-labelledby="process-title">
+      <section id="process" className="section process-section">
         <div className="container">
           <div className="section-intro centered">
             <div>
               <div className="eyebrow-dark">THE PROCESS</div>
 
-              <h2 id="process-title">
+              <h2>
                 Four steps.
                 <span> One clear journey.</span>
               </h2>
@@ -694,12 +659,12 @@ export default function HomePage() {
           REQUIREMENTS
       ================================= */}
 
-      <section id="requirements" className="requirements-section" aria-labelledby="requirements-title">
+      <section id="requirements" className="requirements-section">
         <div className="container requirements-grid">
           <div className="requirements-copy">
             <div className="eyebrow-dark">BE PREPARED</div>
 
-            <h2 id="requirements-title">
+            <h2>
               Get your documents
               <span> ready.</span>
             </h2>
@@ -737,7 +702,7 @@ export default function HomePage() {
           APPLY / CTA
       ================================= */}
 
-      <section id="apply" className="cta-section" aria-labelledby="apply-title">
+      <section id="apply" className="cta-section">
         <div className="container cta-card">
           <div className="cta-decoration decoration-one" />
           <div className="cta-decoration decoration-two" />
@@ -745,7 +710,7 @@ export default function HomePage() {
           <div className="cta-content">
             <div className="eyebrow-light">READY WHEN YOU ARE</div>
 
-            <h2 id="apply-title">
+            <h2>
               Let's talk about
               <br />
               what you need.
@@ -770,7 +735,6 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="outline-button"
-                aria-label="Chat with the MMV team on Messenger"
               >
                 <MessageCircle size={18} />
                 Chat on Messenger
@@ -808,16 +772,15 @@ export default function HomePage() {
       <footer>
         <div className="container footer-grid">
           <div>
-            <Link href="/" className="brand footer-brand" aria-label="MMV Microfinance & Lending home">
-              <Image
-                src="/mmv-logo.png"
-                alt="MMV MicroFinance & Lending"
-                width={568}
-                height={439}
-                className="footer-logo-image"
-                sizes="(max-width: 640px) 150px, 190px"
-                style={{ width: 150, maxWidth: "100%", height: "auto", display: "block" }}
-              />
+            <Link href="/" className="brand footer-brand">
+              <div className="brand-symbol">
+                <span>M</span>
+              </div>
+
+              <div>
+                <strong>MMV</strong>
+                <small>MICROFINANCE & LENDING</small>
+              </div>
             </Link>
 
             <p>
@@ -839,12 +802,12 @@ export default function HomePage() {
           <div>
             <h4>Contact</h4>
 
-            <a href="tel:09190976018" aria-label="Call MMV at 0919 097 6018">
+            <a href="tel:09190976018">
               <Phone size={14} />
               0919 097 6018
             </a>
 
-            <a href="tel:0289262147" aria-label="Call MMV landline at (02) 8926 2147">
+            <a href="tel:0289262147">
               <Phone size={14} />
               (02) 8926 2147
             </a>
